@@ -1,0 +1,68 @@
+/* ============================================================
+   THEME FILE — edit this file to restyle the whole site.
+   Everything here is a CSS variable consumed by Tailwind
+   (see tailwind.config.js) and by the plain CSS in index.css.
+   You should not need to touch any component file to reskin
+   the site — change values below instead.
+   ============================================================ */
+
+:root {
+  /* ---------- Colors ---------- */
+  --color-background: #fbf6ee;      /* page background — warm off-white */
+  --color-surface: #ffffff;         /* raised surfaces on top of background */
+
+  --color-navy: #1a2b4c;            /* headings, primary text, authority */
+  --color-navy-light: #2c3f66;
+
+  --color-gold: #c8933d;            /* primary accent — CTAs, links */
+  --color-gold-light: #d4a055;
+
+  --color-sage: #4e8577;            /* secondary accent — 2nd CTA, success UI */
+  --color-sage-light: #5a9184;
+
+  --color-lavender: #8c7fb5;        /* tertiary accent — icons, badges */
+  --color-lavender-light: #9c8fc0;
+
+  --color-peach: #f7eedf;           /* card background tint (warm) */
+  --color-body-text: #6b7280;       /* secondary / body copy */
+  --color-border: #e5dfd4;          /* hairline borders & dividers */
+  --color-success: #3fa66b;
+
+  --color-footer-bg: #1a2b4c;
+  --color-footer-text: #f5f1e8;
+
+  /* Card background tints — used in rotation across feature cards */
+  --color-card-lavender: #edebf7;
+  --color-card-mint: #e3f0ea;
+  --color-card-peach: #f7eedf;
+
+  /* ---------- Two Ways to Grow: badge / checkmark tints ---------- */
+  --color-lavender-bg: #ede9fe;     /* light badge + checkmark bg, lavender/purple side */
+  --color-sage-bg: #d7f2ea;         /* light badge + checkmark bg, sage/teal side */
+
+  /* ---------- Two Ways to Grow: section + button gradients ---------- */
+  --gradient-section-bg: linear-gradient(135deg, #f5f3ff 0%, #eef1fb 45%, #e6ecfb 100%);
+  --gradient-button: linear-gradient(135deg, #8c7fb5 0%, #6a5fc7 100%);
+
+  /* ---------- Typography ---------- */
+  /* Swap these for any font you like — remember to also update
+     the <link> tags (or @font-face) in index.html if you move
+     away from the system/Google font stack. */
+  --font-heading: "Playfair Display", "Georgia", serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --text-base-size: 16px;
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+
+  /* ---------- Shape & layout ---------- */
+  --radius-card: 16px;
+  --radius-button: 999px;           /* pill-shaped buttons */
+  --content-max-width: 1120px;
+
+  --shadow-card: 0 4px 20px rgba(26, 43, 76, 0.06);
+
+  /* ---------- Motion ---------- */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+}

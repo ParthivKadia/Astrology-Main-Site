@@ -1,0 +1,77 @@
+@import "./styles/theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: var(--text-base-size);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-navy);
+    font-family: var(--font-body);
+    line-height: var(--line-height-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    line-height: var(--line-height-heading);
+    color: var(--color-navy);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  /* Visible keyboard focus for accessibility */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-btn bg-gold px-6 py-3
+      font-body text-sm font-semibold text-white transition-colors
+      duration-150 hover:bg-gold-light;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-btn border border-navy
+      bg-transparent px-6 py-3 font-body text-sm font-semibold text-navy
+      transition-colors duration-150 hover:bg-navy hover:text-white;
+  }
+
+  .card {
+    @apply rounded-card border border-border bg-surface p-6 shadow-card;
+  }
+
+  .badge-icon {
+    @apply flex h-11 w-11 items-center justify-center rounded-full;
+  }
+}
