@@ -4,65 +4,106 @@
    (see tailwind.config.js) and by the plain CSS in index.css.
    You should not need to touch any component file to reskin
    the site — change values below instead.
+
+   DESIGN DIRECTION:
+   Modern Indian technology company, Sarvam/Stripe-inspired.
+   Restrained neutral base + one deep indigo/blue brand color +
+   one warm saffron/orange accent, used sparingly. Astrology
+   influence stays at the level of subtle geometry.
    ============================================================ */
 
 :root {
-  /* ---------- Colors ---------- */
-  --color-background: #fbf6ee;      /* page background — warm off-white */
-  --color-surface: #ffffff;         /* raised surfaces on top of background */
+  /* ---------- Foundation ---------- */
+  --color-background: #faf9f6;
+  --color-surface: #ffffff;
 
-  --color-navy: #1a2b4c;            /* headings, primary text, authority */
-  --color-navy-light: #2c3f66;
+  --color-navy: #151515;
+  --color-navy-light: #2b2b2b;
 
-  --color-gold: #c8933d;            /* primary accent — CTAs, links */
-  --color-gold-light: #d4a055;
+  --color-body-text: #686868;
 
-  --color-sage: #4e8577;            /* secondary accent — 2nd CTA, success UI */
-  --color-sage-light: #5a9184;
+  /* ---------- Brand accents ---------- */
+  --color-brand-blue: #4355b9;
+  --color-brand-indigo: #7168c8;
+  --color-brand-orange: #e88945;
 
-  --color-lavender: #8c7fb5;        /* tertiary accent — icons, badges */
-  --color-lavender-light: #9c8fc0;
+  --color-muted-saffron: #c9824a;
+  --color-deep-maroon: #713d3a;
 
-  --color-peach: #f7eedf;           /* card background tint (warm) */
-  --color-body-text: #6b7280;       /* secondary / body copy */
-  --color-border: #e5dfd4;          /* hairline borders & dividers */
+  /* ---------- Legacy role-based names ---------- */
+  --color-gold: var(--color-brand-orange);
+  --color-gold-light: #f0a570;
+
+  --color-sage: var(--color-brand-blue);
+  --color-sage-light: #5c6dc7;
+
+  --color-lavender: var(--color-brand-indigo);
+  --color-lavender-light: #8a82d1;
+
+  --color-peach: #fbf1e9;
+
   --color-success: #3fa66b;
 
-  --color-footer-bg: #1a2b4c;
-  --color-footer-text: #f5f1e8;
+  /* ---------- Soft accent backgrounds ---------- */
+  --color-accent-soft: #f1f0f8;
+  --color-accent-warm: #fbf1e9;
 
-  /* Card background tints — used in rotation across feature cards */
-  --color-card-lavender: #edebf7;
-  --color-card-mint: #e3f0ea;
-  --color-card-peach: #f7eedf;
+  --color-card-lavender: #f1f0f8;
+  --color-card-mint: #eaebf3;
+  --color-card-peach: #fbf1e9;
 
-  /* ---------- Two Ways to Grow: badge / checkmark tints ---------- */
-  --color-lavender-bg: #ede9fe;     /* light badge + checkmark bg, lavender/purple side */
-  --color-sage-bg: #d7f2ea;         /* light badge + checkmark bg, sage/teal side */
+  --color-lavender-bg: #f1f0f8;
+  --color-sage-bg: #e7e9f5;
 
-  /* ---------- Two Ways to Grow: section + button gradients ---------- */
-  --gradient-section-bg: linear-gradient(135deg, #f5f3ff 0%, #eef1fb 45%, #e6ecfb 100%);
-  --gradient-button: linear-gradient(135deg, #8c7fb5 0%, #6a5fc7 100%);
+  /* ---------- Borders ---------- */
+  --color-border: #e6e3dd;
+  --color-border-strong: #d8d5cf;
+
+  /* ---------- Footer ---------- */
+  --color-footer-bg: #151515;
+  --color-footer-text: #faf9f6;
+
+  /* ---------- Brand gradient ---------- */
+  --gradient-brand: linear-gradient(
+    135deg,
+    var(--color-brand-blue) 0%,
+    var(--color-brand-indigo) 55%,
+    var(--color-brand-orange) 100%
+  );
+
+  --gradient-button: var(--gradient-brand);
+
+  --gradient-section-bg: linear-gradient(
+    180deg,
+    var(--color-background) 0%,
+    var(--color-accent-soft) 100%
+  );
 
   /* ---------- Typography ---------- */
-  /* Swap these for any font you like — remember to also update
-     the <link> tags (or @font-face) in index.html if you move
-     away from the system/Google font stack. */
-  --font-heading: "Playfair Display", "Georgia", serif;
-  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Geist", "Inter", -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Geist", "Inter", -apple-system, "Segoe UI", sans-serif;
+
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
 
   --text-base-size: 16px;
   --line-height-body: 1.6;
-  --line-height-heading: 1.2;
+  --line-height-heading: 1.05;
+
+  /* Type scale helpers */
+  --text-eyebrow: 13px;
+  --tracking-eyebrow: 0.08em;
+
+  --text-hero: clamp(2rem, 3.4vw, 3.25rem);
+  --text-section-heading: clamp(1.75rem, 3.5vw, 3rem);
 
   /* ---------- Shape & layout ---------- */
-  --radius-card: 16px;
-  --radius-button: 999px;           /* pill-shaped buttons */
-  --content-max-width: 1120px;
+  --radius-card: 18px;
+  --radius-button: 999px;
+  --content-max-width: 1240px;
 
-  --shadow-card: 0 4px 20px rgba(26, 43, 76, 0.06);
+  --shadow-card: 0 10px 35px rgba(21, 21, 21, 0.04);
 
   /* ---------- Motion ---------- */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
+  --transition-fast: 200ms ease-out;
+  --transition-base: 350ms ease-out;
 }

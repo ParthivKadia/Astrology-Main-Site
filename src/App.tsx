@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import TwoWaysToGrow from "./components/Twowaystogrow";
+import ProblemSolution from "./components/Problemsolution";
 import About from "./pages/About";
 import Booking from "./pages/Booking";
 
@@ -11,6 +12,7 @@ function Home() {
     <>
       <Hero />
       <TwoWaysToGrow />
+      <ProblemSolution/>
     </>
   );
 }
