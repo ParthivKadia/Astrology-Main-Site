@@ -499,12 +499,12 @@ const clients = [
 // What a professional practice actually gets — real product pillars,
 // not unverified numbers. Swap copy here once you have real testimonials
 // or credentials to add alongside these.
-const trustPillars = [
-  { title: "Secure payments", detail: "Client payments processed and tracked, no manual reconciliation." },
-  { title: "Reliable bookings", detail: "One calendar, no double-bookings, no back-and-forth over chat." },
-  { title: "A professional presence", detail: "A dedicated website clients find credible before they even call." },
-  { title: "Built for astrologers", detail: "Consultation types, not generic 'services' — built around how you work." },
-];
+// const trustPillars = [
+//   { title: "Secure payments", detail: "Client payments processed and tracked, no manual reconciliation." },
+//   { title: "Reliable bookings", detail: "One calendar, no double-bookings, no back-and-forth over chat." },
+//   { title: "A professional presence", detail: "A dedicated website clients find credible before they even call." },
+//   { title: "Built for astrologers", detail: "Consultation types, not generic 'services' — built around how you work." },
+// ];
 
 function Avatar({ name, tint }: { name: string; tint: string }) {
   const initials = name
